@@ -77,7 +77,7 @@ public class VehicleDetailsTests {
 
         }catch (NoSuchElementException e) {
             //wait for vehicle details to load
-            webDriverHelper.waitFor(ExpectedConditions.visibilityOfElementLocated(vehicleDetailsPage.vehicleImage));
+            webDriverHelper.waitFor(ExpectedConditions.visibilityOfElementLocated(vehicleDetailsPage.getVehicleImage()));
 
             //vehicle details from web page
             String extractedVehicleRegistration = vehicleDetailsPage.getVehicleRegistration();
