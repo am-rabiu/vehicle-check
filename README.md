@@ -9,9 +9,10 @@ The project follows the **Page Object Model (POM)** design pattern for better ma
 ## Project Overview
 
 ### Key Features:
-- Test vehicle details with partial and complete form inputs.
+- Tests vehicle details with partial and complete form inputs.
 - Validation of registration, mileage, and postcode fields.
 - Modular Page Object Model to keep test logic and page-specific actions separate.
+- Data-Driven Testing: Handles multiple inputs dynamically, for easier addition of more input files and better scalability.
 
 ---
 
@@ -67,18 +68,13 @@ Alternatively, run `VehicleDetailsTests.java` directly from your IDE.
 
 ---
 
-## Key Classes
+## Assumptions
 
-1. **WebDriverHelper**:
-   - Manages WebDriver setup, initialization, and utility functions like handling cookies.
+The following assumptions were made to determine test pass/fail status:
 
-2. **VehicleDetailsPage**:
-   - Contains page-specific actions like entering registration, mileage, and postcode.
+- Vehicle details can be retrieved from the website using vehicle registration only i.e without entering mileage. As from the website, "No need to fill in a lot of fields, just enter your registration number and we'll identify your car". Test fails if unable to proceed to details page using vehicle registration only.
 
-3. **VehicleDetailsTests**:
-   - Contains test methods:
-     - `getVehicleDetailsWithOnlyRegistrationFieldFilled`
-     - `getVehicleDetailsWithAllFormFieldsFilled`
+- Vehicle details gotten from the website must be an exact match to expected details in car_output file. Test fails if there is a mismatch.
 
 ---
 
