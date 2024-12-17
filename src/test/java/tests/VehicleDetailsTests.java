@@ -1,4 +1,10 @@
+package tests;
 import com.opencsv.exceptions.CsvValidationException;
+
+import pages.VehicleDetailsPage;
+import utilities.Util;
+import utilities.WebDriverHelper;
+
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;

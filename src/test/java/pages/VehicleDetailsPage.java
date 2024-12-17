@@ -1,7 +1,11 @@
+package pages;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+
+import utilities.Util;
 
 import java.util.List;
 
@@ -21,7 +25,7 @@ public class VehicleDetailsPage {
     By vehicleRegistration = By.xpath("//div[@class='vyv__number-plate']");
     By fuelType = By.xpath("//html/body/section/div/div/section/ol/li[2]/section/div/div[1]/ul/li[2]");
     By gearType = By.xpath("/html/body/section/div/div/section/ol/li[2]/section/div/div[1]/ul/li[3]");
-    By vehicleImage = By.xpath("/html/body/section/div/div/section/ol/li[2]/section/div/div[1]/div/div[1]/div/img");
+    public By vehicleImage = By.xpath("/html/body/section/div/div/section/ol/li[2]/section/div/div[1]/div/div[1]/div/img");
 
 
     public VehicleDetailsPage(WebDriver _driver){
