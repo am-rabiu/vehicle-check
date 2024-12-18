@@ -30,8 +30,6 @@ public class WebDriverHelper {
         }
     }
 
-//    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-//            wait.until(ExpectedConditions.visibilityOfElementLocated();
 
     public WebElement waitForExpectedElement(final By by, Duration waitTimeInSeconds) {
         try {
